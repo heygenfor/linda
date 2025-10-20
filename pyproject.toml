@@ -56,11 +56,6 @@ dependencies = [
     "webencodings==0.5.1",
 ]
 
-[tool.uv]
-dev-dependencies = [
-    "pytest",
-    "black",
-]
 
 [tool.wasmer]
 entrypoint = "gunicorn mysite.wsgi:application --bind 0.0.0.0:${PORT:-8000}"
@@ -69,4 +64,8 @@ entrypoint = "gunicorn mysite.wsgi:application --bind 0.0.0.0:${PORT:-8000}"
 DJANGO_SETTINGS_MODULE = "mysite.settings"
 PYTHONUNBUFFERED = "1"
 [tool.uv]
+dev-dependencies = [
+    "pytest",
+    "black",
+]
 index-strategy = "unsafe-best-match"
