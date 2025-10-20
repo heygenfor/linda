@@ -21,7 +21,7 @@ tzlocal==5.2
 reportlab==4.1.0
 svglib==1.5.1
 xhtml2pdf==0.2.16
-Pillow==11.0.0
+pillow==10.3.0
 qrcode==7.4.2
 pypdf==5.0.0
 PyPDF2==3.0.1
