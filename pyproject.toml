@@ -6,40 +6,54 @@ readme = "README.md"
 requires-python = ">=3.11"
 
 dependencies = [
-    # Core Django + server
+    # --- Core Framework ---
     "django>=5.1.6",
     "gunicorn>=23.0.0",
-    "whitenoise>=6.9.0",
     "dj-database-url>=2.3.0",
-    # Database clients
+    "whitenoise>=6.7.0,<6.9.0",
+    "django-cors-headers>=4.4.0",
+    "django-storages>=1.14.4",
+    "django-cloudinary-storage==0.3.0",
+    "cloudinary==1.41.0",
+    "django-admin-soft-dashboard==1.0.12",
+    "djangorestframework>=3.15.2",
+
+    # --- Database Clients ---
     "mysqlclient==2.2.7",
     "psycopg[binary]>=3.2",
-    # Cloudinary + storage
-    "cloudinary==1.41.0",
-    "django-cloudinary-storage==0.3.0",
-    "django-storages>=1.14.4",
-    # REST framework and extras
-    "djangorestframework>=3.15.2",
-    "django-cors-headers>=4.4.0",
-    "django-admin-soft-dashboard==1.0.12",
-    # Utility and PDF/report generation
-    "xhtml2pdf==0.2.16",
+
+    # --- Utilities & Helpers ---
+    "requests>=2.32.3",
+    "packaging>=24.1",
+    "future==1.0.0",
+    "tzdata>=2024.1",
+    "tzlocal==5.2",
+    "pytz>=2023.3,<2024.0",
+    "user-agents>=2.2.0",
+    "geocoder==1.38.1",
+    "ratelim==0.1.6",
+    "ua-parser==0.18.0",
+    "uritools==4.0.3",
+    "six==1.16.0",
+    "typing_extensions>=4.12.2",
+    "decorator==5.1.1",
+
+    # --- PDF / Reporting / Image ---
     "reportlab>=4.1.0",
     "svglib==1.5.1",
-    "tinycss2==1.3.0",
-    "html5lib==1.1",
+    "xhtml2pdf==0.2.16",
+    "pillow>=10.3.0,<11.0.0",
     "qrcode==7.4.2",
     "pypdf==5.0.0",
     "pyhanko==0.25.0",
     "pyhanko-certvalidator==0.26.3",
-    # Misc tools
-    "geocoder==1.38.1",
-    "requests>=2.32.3",
-    "packaging>=24.2",
-    "future==1.0.0",
-    "tzlocal==5.2",
-    "pytz==2024.2",
-    "user-agents>=2.2.0",
+
+    # --- HTML / Parsing / Rendering ---
+    "html5lib==1.1",
+    "tinycss2==1.3.0",
+    "cssselect2==0.7.0",
+    "lxml>=4.9.0",
+    "webencodings==0.5.1",
 ]
 
 [tool.uv]
@@ -48,12 +62,9 @@ dev-dependencies = [
     "black",
 ]
 
-# Optional Wasmer-specific section
 [tool.wasmer]
-# The entry point for your Django app
 entrypoint = "gunicorn mysite.wsgi:application --bind 0.0.0.0:${PORT:-8000}"
 
-# Environment configuration
 [tool.wasmer.env]
 DJANGO_SETTINGS_MODULE = "mysite.settings"
 PYTHONUNBUFFERED = "1"
