@@ -6,6 +6,7 @@ authors = [{ name = "Full Blessing" }]
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 
+
 dependencies = [
     # --- Core Framework ---
     "Django==5.1.6",
