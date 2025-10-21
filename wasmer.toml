@@ -1,9 +1,8 @@
-# Wasmer manifest for Django project
 [package]
 entrypoint = "start"
 
 [dependencies]
-"python/python" = "=3.12.7"
+"python/python" = "3.12"
 "wasmer/bash" = "=1.0.24"
 
 [fs]
