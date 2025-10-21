@@ -579,7 +579,6 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "boto3" },
-    { name = "cryptography" },
     { name = "cssselect2" },
     { name = "decorator" },
     { name = "dj-database-url" },
@@ -631,7 +630,6 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "boto3", specifier = "==1.35.25" },
-    { name = "cryptography", specifier = "==43.0.1" },
     { name = "cssselect2", specifier = "==0.7.0" },
     { name = "decorator", specifier = "==5.1.1" },
     { name = "dj-database-url", specifier = "==2.3.0" },
