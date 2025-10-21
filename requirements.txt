@@ -48,7 +48,6 @@ tinycss2==1.3.0
 cssselect2==0.7.0
 webencodings==0.5.1
 PyJWT==2.9.0
-cryptography==43.0.1
 
 # --- Runtime ---
 uvicorn==0.38.0
