@@ -22,7 +22,7 @@ dependencies = [
 
     # --- Database Clients ---
     "mysqlclient==2.2.7",
-    "psycopg[binary]==3.2.1",
+    "psycopg = "3.2.1",
 
     # --- Utilities & Helpers ---
     "boto3==1.35.25",
