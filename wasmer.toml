@@ -2,7 +2,7 @@
 entrypoint = "start"
 
 [dependencies]
-"python/python" = "3.13.1"
+"python/python" = ">=3.11"
 "wasmer/bash" = "=1.0.24"
 
 [fs]
